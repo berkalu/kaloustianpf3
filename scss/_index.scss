@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap);
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: $colorGray;
+}
+
+.info {
+    .info-content {
+        text-align: center;
+        color: black;
+        width: 50%;
+        margin-top: 150px;
+        h1 {
+            font-weight: 900;
+            font-size: 5em;
+            color: $colorPink;
+        }
+        h3 {
+            font-size: 1.8em;
+        }
+        p {
+            font-size: 1.4em;
+        }
+        .btn {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1em;
+            background: none;
+            border-radius: 30px;
+            border:2px solid black;
+            margin-top: 10px;
+            background-color: $colorPink;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            width: 20vh;
+            height: 7vh;
+            &:hover {
+                background-color: $colorLightGray;
+                color:#181818;
+                transition:all .9s ease-in-out;
+            }
+        }
+    }
+    .carousel {
+        padding: 50px;
+        width: 50%;
+        .d-block{
+            height: 60%;
+            width: 100%;
+            text-align: center;
+            border-radius: 10%;
+        }
+    
+    }
+    .porQue {
+        text-align: center;
+        margin-top: 50px;
+        padding: 30px;
+        border-top: 1px solid black ;
+    }
+    .card {
+        background-color: $colorGray;
+        text-align: center;
+        border: none;
+        img {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+    }
+}
+

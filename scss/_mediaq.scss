@@ -1,0 +1,123 @@
+@media only screen and (max-width: 992px)  {
+
+    .navbar {
+        .logo {
+            height: 200px;
+            width: 200px;
+        }    
+    }
+    .info {
+        .info-content {
+            margin: auto;
+            margin-top: 5vh;
+            h1 {
+                font-size: 3.5em;
+            }
+            h3 {
+                font-size: 2em;
+            }
+        }
+        .carousel {
+            width: 70%;
+            margin: auto;
+            .carousel-inner {
+                .d-block {
+                height: 50%;
+                width: 100%;
+                }
+            }
+        }
+    }
+    .row {
+        .card img {
+            width: 130px;
+            height: 130px;
+        }
+    }   
+    .fab {
+        font-size: 2em;
+    }
+    .nosotros {
+        flex-direction: column;
+    }
+    .promos {
+        .promos__txt {
+            p {
+            font-size: 0.8em;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 426px) {
+
+    .info {
+        .info-content {
+            margin: auto;
+            margin-top: 5vh;
+            h1 {
+                font-size: 2.5em;
+            }
+            h3 {
+                font-size: 1.5em;
+            }
+        }
+        .carousel {
+            width: 650px;
+            .carousel-inner {
+                .d-block {
+                height: 75%;
+                width: 80%;
+                margin: auto;
+                }
+            }
+        }
+    }
+
+    .row {
+        .card img {
+            width: 100px;
+            height: 100px;
+        }
+    }   
+
+    footer {
+    .redcont {
+        .fab {
+            font-size: 1.5em;
+            padding-inline: 10px;
+        }
+        }
+    }   
+
+    .nosotros {
+        flex-direction: column;
+        margin: 5vh;
+        .nosotros__txt {
+            p {
+                font-size: 0.8em;
+            }
+        }
+        .nosotros__img{
+            .imgnos{
+                width: 100px;
+                height: 120px;
+            }
+        }
+    }
+
+    .headnos {
+        h2 {
+            font-size: 2em;
+        }
+    }
+    .promos {
+        .promos__txt {
+            p {
+            font-size: 0.5em;
+            }
+        }
+    }
+}

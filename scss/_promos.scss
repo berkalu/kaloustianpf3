@@ -1,0 +1,24 @@
+.promos {
+    @include cajasflex(flex, column, center, center);
+    margin: 30px;
+    .promos__img {
+        height: 60%;
+        width: 60%;
+        margin: 30px;
+        border-radius: 5%;
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 5%;
+        }
+    }
+    .promos__txt {
+        @include cajasflex(flex, column, center, center);
+        @include cajastyle(60%, 40%, auto, 2em, center, $colorPink, 6px solid black, 5%);
+    }
+}
+
+
+
+
+

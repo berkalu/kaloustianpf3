@@ -1,0 +1,36 @@
+.headnos {
+    h2 {
+        font-weight: map-get($opciones, fontW);
+        font-size: map-get($opciones, fontS);
+        text-align: map-get($opciones, algnCentro);
+        margin: auto;
+    }
+}
+
+.nosotros {
+    display: flex;
+    align-items: map-get($opciones, algnCentro);
+    align-content: map-get($opciones, algnCentro);
+    margin: 5vh;
+    font-size: 1.5em;
+    color: map-get($opciones, colorPink);
+    background-color: map-get($opciones, colorGray);
+    .nosotros__txt {
+        text-align: map-get($opciones, algnCentro);
+        h2 {
+            margin: map-get($opciones, marginGral);
+            font-weight: map-get($opciones, fontW);
+        }
+        p {
+            margin: map-get($opciones, marginGral);
+        }
+    }
+    .nosotros__img{
+        img{
+            width: 180px;
+            height: 200px;
+            transform: rotate(45deg);
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+
+.navbar {
+    background-color: $colorPink;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+    font-weight: 999;
+    border-bottom: 2px solid black;
+    .logo {
+        height: 150px;
+        width: 150px;
+    }
+}
+

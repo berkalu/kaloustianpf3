@@ -1,0 +1,39 @@
+$colorPink: lightpink;
+$colorGray: gray;
+$colorLightGray: lightgray;
+
+/* MAP-GET USADO SECCION NOSOTROS*/
+
+$opciones: (
+    colorPink: lightpink,
+    colorGray: gray,
+    algnCentro: center,
+    marginGral: 3vh,
+    fontW: 900,
+    fontS: 2.5em,
+);
+
+/* MIXIN USADO EN PROMOS */
+
+@mixin cajasflex($display, $dir, $align, $justify) {
+    display: $display;
+    flex-direction: $dir;
+    align-items: $align;
+    justify-content: $justify;
+    
+}
+
+@mixin cajastyle($alto, $ancho, $margen, $tfuente, $talign, $color, $borde, $radius) {
+    height: $alto;
+    width: $ancho;
+    margin: $margen;
+    font-size: $tfuente;
+    text-align: $talign;
+    color: $color;
+    border: $borde;
+    border-radius: $radius;   
+}
+
+/* EXTEND USADO EN PRODUCTOS */
+
+

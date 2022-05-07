@@ -1,0 +1,7 @@
+Cambio para mejorar SEO
+
+1) Cambie los titulos de las paginas.
+2) Cambie el logo a formato PNG.
+3) Agregue keyworks a cada pagina.
+4) Agregue descrpition a cada pagina.
+5) Realice una mejora en el uso de los encabezados de todas las paginas.

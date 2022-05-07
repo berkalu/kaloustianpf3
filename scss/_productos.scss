@@ -1,0 +1,68 @@
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 100px;
+    .productos__1, .productos__2 {
+        width: 320px;
+        margin: 20px;
+        background-color: $colorPink;
+        border: 2px solid black;
+        border-radius: 5%;
+        .productos__img {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            img{
+                width: 300px;
+                height: 300px;
+                border-radius: 5%;
+                margin: 5px;
+            }
+        }
+        .cardtxt {
+            text-align: center;
+        }
+        .cardbtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .boton_precio {
+                width: 150px;
+                background: gray;
+                color: black;
+                border: 2px solid black;
+                border-radius: 8%;
+                padding: 6px;
+                cursor: pointer;
+                font-family: 'Oswald', sans-serif;
+                margin: 10px;
+                &:hover {
+                    background-color: $colorLightGray;
+                    transition:all .9s ease-in-out;
+                }
+            }
+            .boton_promo {
+                @extend .boton_precio;
+                background-color: goldenrod;
+            }
+        }
+    }
+    .productos__2 {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
