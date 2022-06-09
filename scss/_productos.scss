@@ -1,9 +1,9 @@
-.productos {
+#mainProductos {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 100px;
-    .productos__1, .productos__2 {
+    .productos__1 {
         width: 320px;
         margin: 20px;
         background-color: $colorPink;
@@ -27,7 +27,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            .boton_precio {
+            #boton_precio {
                 width: 150px;
                 background: gray;
                 color: black;
@@ -42,14 +42,10 @@
                     transition:all .9s ease-in-out;
                 }
             }
-            .boton_promo {
-                @extend .boton_precio;
-                background-color: goldenrod;
-            }
         }
-    }
-    .productos__2 {
-        display: none;
+        #alert {
+            text-align: center;
+        }
     }
 }
 

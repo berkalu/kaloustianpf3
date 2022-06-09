@@ -172,33 +172,33 @@ footer {
     transform: rotate(45deg);
     margin-bottom: 20px; }
 
-.productos {
+#mainProductos {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 100px; }
-  .productos .productos__1, .productos .productos__2 {
+  #mainProductos .productos__1 {
     width: 320px;
     margin: 20px;
     background-color: lightpink;
     border: 2px solid black;
     border-radius: 5%; }
-    .productos .productos__1 .productos__img, .productos .productos__2 .productos__img {
+    #mainProductos .productos__1 .productos__img {
       display: flex;
       justify-content: center;
       align-content: center; }
-      .productos .productos__1 .productos__img img, .productos .productos__2 .productos__img img {
+      #mainProductos .productos__1 .productos__img img {
         width: 300px;
         height: 300px;
         border-radius: 5%;
         margin: 5px; }
-    .productos .productos__1 .cardtxt, .productos .productos__2 .cardtxt {
+    #mainProductos .productos__1 .cardtxt {
       text-align: center; }
-    .productos .productos__1 .cardbtn, .productos .productos__2 .cardbtn {
+    #mainProductos .productos__1 .cardbtn {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .productos .productos__1 .cardbtn .boton_precio, .productos .productos__1 .cardbtn .boton_promo, .productos .productos__2 .cardbtn .boton_precio, .productos .productos__2 .cardbtn .boton_promo {
+      #mainProductos .productos__1 .cardbtn #boton_precio {
         width: 150px;
         background: gray;
         color: black;
@@ -208,13 +208,11 @@ footer {
         cursor: pointer;
         font-family: 'Oswald', sans-serif;
         margin: 10px; }
-        .productos .productos__1 .cardbtn .boton_precio:hover, .productos .productos__1 .cardbtn .boton_promo:hover, .productos .productos__2 .cardbtn .boton_precio:hover, .productos .productos__2 .cardbtn .boton_promo:hover {
+        #mainProductos .productos__1 .cardbtn #boton_precio:hover {
           background-color: lightgray;
           transition: all .9s ease-in-out; }
-      .productos .productos__1 .cardbtn .boton_promo, .productos .productos__2 .cardbtn .boton_promo {
-        background-color: goldenrod; }
-  .productos .productos__2 {
-    display: none; }
+    #mainProductos .productos__1 #alert {
+      text-align: center; }
 
 .promos {
   display: flex;
