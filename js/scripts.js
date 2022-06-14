@@ -1,7 +1,8 @@
 
 // cards
 
-const arrayTortas = [{
+let arrayTortas = [
+{
     id: 1,
     img: "img/marquise.jpg",
     nombre: "Marquise",
@@ -58,46 +59,74 @@ const arrayTortas = [{
     stock: 0
 }
 ];
-console.log(arrayTortas)
 
-class Torta {
-constructor(id, img, nombre, precio, stock) {
-    this.id = id;
-    this.img = img;
-    this.nombre = nombre;
-    this.precio = precio;
-    this.stock = stock;
-}
-}
-
+const contenedorCarrito = document.getElementById('carrito-contenedor');
 const productosSection = document.getElementById('mainProductos');
+const precioTotal = document.getElementById('precioTotal'); 
 
-for (let buscado of arrayTortas) {
-    productosSection.innerHTML += `
+let carrito = []
+
+arrayTortas.forEach((productos) => {
+    const div = document.createElement("div")
+    div.innerHTML += `
     <div class="productos__1">
         <div class="productos__img">
-            <img src="${buscado.img}">
+            <img src="${productos.img}">
         </div>
         <article class="cardtxt">
-            <p>${buscado.nombre}</p>
+            <p>${productos.nombre}</p>
         </article>
         <div class="cardbtn">
-            <button id="boton_precio">COMPRAR ${buscado.precio}</button>
+            <button id="agregar${productos.id}" class="boton_precio">COMPRAR ${productos.precio}</button>
         </div>
-        <div id="alert"></div>
     </div>   
     `
+    productosSection.appendChild(div)
+
+    // Funcion boton
+    const botonComprar = document.getElementById(`agregar${productos.id}`)
+
+    botonComprar.addEventListener('click', () => {
+        agregarCarrito(productos.id)
+    })
+})
+
+// funcion agregar
+const agregarCarrito = (agregarId) => {
+    const item = arrayTortas.find((prod) => prod.id === agregarId)
+    carrito.push(item)
+    productoCarrito()
+    console.log(carrito)
 }
 
-// Funcion boton
 
-const botonComprar = document.getElementById("boton_precio")
-const alertCompra = document.getElementById('alert')
+//imprimir en el carrito
+const productoCarrito = () => {
+    contenedorCarrito.innerHTML = ""
+    carrito.forEach((prod) => {
+        const div = document.createElement('div')
+        div.className = ('productoEnCarrito')
+        div.innerHTML = `
+        <p>${prod.nombre}</p>
+        <p>Precio:$${prod.precio}</p>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="botonEliminar">ELMINAR PRODUCTO</button>
+        `
 
-botonComprar.addEventListener('click', () => {
-    console.log("funca")
-    const comprado = document.createElement('div')
-    comprado.innerHTML = `<p>AGREGADO AL CARRITO</p>`
-    alertCompra.appendChild(comprado)
-    botonComprar.innerText="QUITAR"
-})
+        contenedorCarrito.appendChild(div)
+
+    })
+    //sumar total
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
+}
+
+
+// eliminar item
+
+const eliminarDelCarrito = (borrarId) => {
+    const item = carrito.find((prod) => prod.id === borrarId)
+    const indice = carrito.indexOf(item)
+    carrito.splice(indice, 1) 
+    productoCarrito()
+    console.log(carrito)
+}
+
