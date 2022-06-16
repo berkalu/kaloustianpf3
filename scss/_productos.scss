@@ -63,15 +63,25 @@
         width: 150px;
                 background: gray;
                 color: black;
-                border: 2px solid black;
-                border-radius: 8%;
-                padding: 6px;
+                padding: 3px;
                 cursor: pointer;
                 font-family: 'Oswald', sans-serif;
                 margin: 10px;
                 &:hover {
                     background-color: $colorLightGray;
                     transition:all .9s ease-in-out;}
+    }
+    .precioProducto {
+        background-color: goldenrod;
+        font-size: 30px;
+        margin: 10px;
+    }
+    .productoEnCarrito {
+        p {
+        background-color: white;
+        margin: 10px;
+        }
+        
     }
 }
 

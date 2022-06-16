@@ -66,6 +66,14 @@ const precioTotal = document.getElementById('precioTotal');
 
 let carrito = []
 
+// guardamos la compra en storage
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        productoCarrito()
+    }
+})
+
 arrayTortas.forEach((productos) => {
     const div = document.createElement("div")
     div.innerHTML += `
@@ -113,10 +121,10 @@ const productoCarrito = () => {
         `
 
         contenedorCarrito.appendChild(div)
-
+        localStorage.setItem('carrito', JSON.stringify(carrito))
     })
     //sumar total
-    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
+    precioTotal.innerText = carrito.reduce((acum, prod) => acum + prod.precio, 0)
 }
 
 
