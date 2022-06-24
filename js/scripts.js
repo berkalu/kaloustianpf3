@@ -1,5 +1,5 @@
 
-// cards
+// array
 
 let arrayTortas = [
 {
@@ -66,7 +66,7 @@ const precioTotal = document.getElementById('precioTotal');
 
 let carrito = []
 
-// guardamos la compra en storage
+// guardamos el carrito en storage
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -91,7 +91,7 @@ arrayTortas.forEach((productos) => {
     `
     productosSection.appendChild(div)
 
-    // Funcion boton
+// Funcion boton
     const botonComprar = document.getElementById(`agregar${productos.id}`)
 
     botonComprar.addEventListener('click', () => {
@@ -104,9 +104,27 @@ const agregarCarrito = (agregarId) => {
     const item = arrayTortas.find((prod) => prod.id === agregarId)
     carrito.push(item)
     productoCarrito()
+    Swal.fire({
+        icon: 'success',
+        title: 'AGREGADO AL CARRITO !',
+        imageUrl: item.img,
+        imageWidth: 300,
+        imageHeight: 300,
+        text: 'Producto: '+item.nombre,
+    });
     console.log(carrito)
 }
 
+
+// eliminar item
+
+const eliminarDelCarrito = (borrarId) => {
+    const item = carrito.find((prod) => prod.id === borrarId)
+    const indice = carrito.indexOf(item)
+    carrito.splice(indice, 1) 
+    productoCarrito()
+    console.log(carrito)
+}
 
 //imprimir en el carrito
 const productoCarrito = () => {
@@ -121,20 +139,9 @@ const productoCarrito = () => {
         `
 
         contenedorCarrito.appendChild(div)
+        //convertimos a JSON string
         localStorage.setItem('carrito', JSON.stringify(carrito))
     })
     //sumar total
     precioTotal.innerText = carrito.reduce((acum, prod) => acum + prod.precio, 0)
 }
-
-
-// eliminar item
-
-const eliminarDelCarrito = (borrarId) => {
-    const item = carrito.find((prod) => prod.id === borrarId)
-    const indice = carrito.indexOf(item)
-    carrito.splice(indice, 1) 
-    productoCarrito()
-    console.log(carrito)
-}
-
