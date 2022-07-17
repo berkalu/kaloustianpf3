@@ -11,6 +11,18 @@
   .navbar .logo {
     height: 150px;
     width: 150px; }
+  .navbar #botonCarrito {
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 30px;
+    position: fixed;
+    z-index: 999;
+    margin-left: 250px; }
 
 body {
   font-family: 'Oswald', sans-serif;
@@ -172,75 +184,265 @@ footer {
     transform: rotate(45deg);
     margin-bottom: 20px; }
 
-#mainProductos {
+#finalizar {
+  text-align: center;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 100px; }
-  #mainProductos .productos__1 {
-    width: 320px;
-    margin: 20px;
+  flex-direction: column;
+  width: 60%;
+  position: fixed;
+  z-index: 999;
+  top: 5%;
+  right: 25%;
+  left: 25%;
+  background-color: lightgray; }
+  #finalizar #modalCerrar {
+    border: none;
+    width: 22px;
     background-color: lightpink;
-    border: 2px solid black;
-    border-radius: 5%; }
-    #mainProductos .productos__1 .productos__img {
-      display: flex;
-      justify-content: center;
-      align-content: center; }
-      #mainProductos .productos__1 .productos__img img {
-        width: 300px;
-        height: 300px;
-        border-radius: 5%;
-        margin: 5px; }
-    #mainProductos .productos__1 .cardtxt {
-      text-align: center; }
-    #mainProductos .productos__1 .cardbtn {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      #mainProductos .productos__1 .cardbtn .boton_precio {
-        width: 150px;
-        background: gray;
-        color: black;
-        border: 2px solid black;
-        border-radius: 8%;
-        padding: 6px;
-        cursor: pointer;
-        font-family: 'Oswald', sans-serif;
-        margin: 10px; }
-        #mainProductos .productos__1 .cardbtn .boton_precio:hover {
-          background-color: lightgray;
-          transition: all .9s ease-in-out; }
-    #mainProductos .productos__1 #alert {
-      text-align: center; }
-
-.carroContenedor {
-  display: flex;
-  justify-content: center;
-  margin: 50px; }
-  .carroContenedor .carrito {
+    margin: auto; }
+  #finalizar #formulario {
     text-align: center;
-    border: 2px solid black;
-    background-color: lightpink;
-    width: 200px; }
-  .carroContenedor .botonEliminar {
-    width: 150px;
-    background: gray;
-    color: black;
-    padding: 3px;
-    cursor: pointer;
-    font-family: 'Oswald', sans-serif;
-    margin: 10px; }
-    .carroContenedor .botonEliminar:hover {
-      background-color: lightgray;
-      transition: all .9s ease-in-out; }
-  .carroContenedor .precioProducto {
-    background-color: goldenrod;
-    font-size: 30px;
-    margin: 10px; }
-  .carroContenedor .productoEnCarrito p {
-    background-color: white;
-    margin: 10px; }
+    display: flex;
+    flex-direction: column;
+    /* ----- -----  Estilos para Validacion ----- ----- */ }
+    #finalizar #formulario .formulario__label {
+      display: block;
+      font-weight: 700;
+      padding: 10px;
+      cursor: pointer; }
+    #finalizar #formulario .formulario__grupo-input {
+      position: relative; }
+    #finalizar #formulario .formulario__input {
+      width: 100%;
+      background: #fff;
+      border: 3px solid transparent;
+      border-radius: 3px;
+      height: 45px;
+      line-height: 45px;
+      padding: 0 40px 0 10px;
+      transition: .3s ease all; }
+    #finalizar #formulario .formulario__input:focus {
+      border: 3px solid #0075FF;
+      outline: none;
+      box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4); }
+    #finalizar #formulario .formulario__input-error {
+      font-size: 12px;
+      margin-bottom: 0;
+      display: none; }
+    #finalizar #formulario .formulario__input-error-activo {
+      display: block; }
+    #finalizar #formulario .formulario__validacion-estado {
+      position: absolute;
+      right: 10px;
+      bottom: 15px;
+      z-index: 100;
+      font-size: 16px;
+      opacity: 0; }
+    #finalizar #formulario .formulario__checkbox {
+      margin: 15px; }
+    #finalizar #formulario .formulario__grupo-terminos,
+    #finalizar #formulario .formulario__mensaje,
+    #finalizar #formulario .formulario__grupo-btn-enviar {
+      grid-column: span 2; }
+    #finalizar #formulario .formulario__mensaje {
+      height: 45px;
+      line-height: 45px;
+      background: #F66060;
+      padding: 0 15px;
+      border-radius: 3px;
+      display: none;
+      margin: 15px; }
+    #finalizar #formulario .formulario__mensaje-activo {
+      display: block; }
+    #finalizar #formulario .formulario__mensaje p {
+      margin: 0; }
+    #finalizar #formulario .formulario__grupo-btn-enviar {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    #finalizar #formulario .formulario__btn {
+      height: 45px;
+      line-height: 45px;
+      width: 30%;
+      margin-bottom: 15px;
+      background: green;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: .1s ease all; }
+    #finalizar #formulario .formulario__btn:hover {
+      box-shadow: 3px 0px 30px #a3a3a3; }
+    #finalizar #formulario .formulario__mensaje-exito {
+      font-size: 34px;
+      background-color: white;
+      color: #119200;
+      display: none; }
+    #finalizar #formulario .formulario__mensaje-exito-activo {
+      display: block; }
+    #finalizar #formulario .formulario__grupo-correcto .formulario__validacion-estado {
+      color: #1ed12d;
+      opacity: 1; }
+    #finalizar #formulario .formulario__grupo-incorrecto .formulario__label {
+      color: #bb2929; }
+    #finalizar #formulario .formulario__grupo-incorrecto .formulario__validacion-estado {
+      color: #bb2929;
+      opacity: 1; }
+    #finalizar #formulario .formulario__grupo-incorrecto .formulario__input {
+      border: 3px solid #bb2929; }
+
+#carroCompras #modalCompras {
+  width: 30%;
+  border: 3px solid black;
+  background-color: lightgray;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  margin: auto;
+  top: 5%;
+  right: 25%;
+  left: 25%; }
+  #carroCompras #modalCompras .hidden {
+    visibility: hidden;
+    opacity: 0; }
+  #carroCompras #modalCompras #carritoCerrar {
+    border: none;
+    background-color: lightpink; }
+  #carroCompras #modalCompras .modalCarrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    #carroCompras #modalCompras .modalCarrito .payButton {
+      width: 30%;
+      background: green;
+      color: white;
+      border: 2px solid black;
+      border-radius: 8%;
+      padding: 6px;
+      cursor: pointer;
+      font-family: 'Oswald', sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      margin: 10px; }
+    #carroCompras #modalCompras .modalCarrito #vaciar-carrito {
+      background-color: red; }
+    #carroCompras #modalCompras .modalCarrito .payButton:hover {
+      cursor: pointer;
+      color: white;
+      background-color: lightpink; }
+    #carroCompras #modalCompras .modalCarrito span {
+      position: relative; }
+    #carroCompras #modalCompras .modalCarrito #total {
+      width: 40%;
+      background-color: lightpink;
+      border: 2px solid black; }
+    #carroCompras #modalCompras .modalCarrito #carroContenedor {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      #carroCompras #modalCompras .modalCarrito #carroContenedor .item {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 15px;
+        border: 1px solid black; }
+        #carroCompras #modalCompras .modalCarrito #carroContenedor .item img {
+          width: 75px;
+          height: 75px;
+          margin: 5px;
+          border: #1b1b1b 0.5px solid; }
+        #carroCompras #modalCompras .modalCarrito #carroContenedor .item .item--info {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          justify-content: center; }
+          #carroCompras #modalCompras .modalCarrito #carroContenedor .item .item--info h5 {
+            max-width: 15ch;
+            margin: .25rem .25rem;
+            font-size: 20px; }
+          #carroCompras #modalCompras .modalCarrito #carroContenedor .item .item--info .removeFromCart {
+            font-size: 12px;
+            background: red;
+            color: black;
+            border: 2px solid black;
+            border-radius: 8%;
+            padding: 5px;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            margin: 5px; }
+
+#store {
+  display: flex; }
+  #store #ordenar {
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px; }
+  #store #productosOrdenados {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: auto; }
+    #store #productosOrdenados #boton-carrito {
+      border: none;
+      color: lightpink;
+      font-size: 30px;
+      background-color: white;
+      padding: 10px 20px;
+      transition: all .8s; }
+    #store #productosOrdenados #boton-carrito:hover {
+      cursor: pointer;
+      color: white;
+      background-color: lightpink; }
+    #store #productosOrdenados #boton-carrito:focus {
+      outline: none; }
+    #store #productosOrdenados .productos__1 {
+      width: 320px;
+      margin: 20px;
+      background-color: lightpink;
+      border: 2px solid black;
+      border-radius: 5%; }
+      #store #productosOrdenados .productos__1 .productos__img {
+        display: flex;
+        justify-content: center;
+        align-content: center; }
+        #store #productosOrdenados .productos__1 .productos__img img {
+          width: 300px;
+          height: 300px;
+          border-radius: 5%;
+          margin: 5px; }
+      #store #productosOrdenados .productos__1 .cardtxt {
+        text-align: center; }
+      #store #productosOrdenados .productos__1 .cardbtn {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #store #productosOrdenados .productos__1 .cardbtn .btn {
+          width: 150px;
+          background: gray;
+          color: black;
+          border: 2px solid black;
+          border-radius: 8%;
+          padding: 6px;
+          cursor: pointer;
+          font-family: 'Oswald', sans-serif;
+          margin: 10px; }
+          #store #productosOrdenados .productos__1 .cardbtn .btn:hover {
+            background-color: lightgray;
+            transition: all .9s ease-in-out; }
+
+.hidden {
+  visibility: hidden;
+  opacity: 0; }
+
+.visible {
+  visibility: visible;
+  opacity: 1; }
 
 .promos {
   display: flex;

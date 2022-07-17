@@ -9,5 +9,18 @@
         height: 150px;
         width: 150px;
     }
+    #botonCarrito {
+        border: none;
+        border-radius: 50%;
+        padding: 15px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        font-size: 30px;
+        position: fixed;
+        z-index: 999;
+        margin-left: 250px;
+    }
 }
 

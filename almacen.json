@@ -1,0 +1,8 @@
+[{"id":11,"foto":"img/marquise.jpg","nombre":"Marquise","precio":2600},
+{"id":22,"foto":"img/tfrutilla.jpg","nombre":"Tarta de frutillas","precio":2900},
+{"id":33,"foto":"img/tcoco.jpg","nombre":"Tarta de Coco","precio":2400},
+{"id":44,"foto":"img/tborracha.jpg","nombre":"Torta Borracha","precio":3100},
+{"id":55,"foto":"img/echocolate.jpg","nombre":"Explosion de Chocolate","precio":3300},
+{"id":66,"foto":"img/thelada.jpg","nombre":"Torta Helada","precio":2750},
+{"id":77,"foto":"img/cabsha.jpg","nombre":"Tarta Cabsha","precio":2500},
+{"id":88,"foto":"img/hpascua.jpg","nombre":"Huevos de Pascua","precio":1600}]

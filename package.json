@@ -165,6 +165,7 @@
     "json-schema-traverse": "^0.4.1",
     "json-stringify-safe": "^5.0.1",
     "jsprim": "^1.4.2",
+    "just-validate": "^3.8.1",
     "keyv": "^3.1.0",
     "kind-of": "^6.0.3",
     "latest-version": "^5.1.0",
